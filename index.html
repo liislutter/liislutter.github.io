@@ -392,3 +392,80 @@ animate(0);
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Y2K Flower Fantasy</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#f3edf5;
+    font-family:Arial,sans-serif;
+    cursor:none;
+}
+
+canvas{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+/* dreamy overlay */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,170,210,.22), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(120,255,230,.16), transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(255,210,160,.18), transparent 35%);
+
+    mix-blend-mode:screen;
+}
+
+/* grain */
+
+.grain{
+    position:fixed;
+    inset:0;
+    opacity:.05;
+    pointer-events:none;
+    background-image:
+        radial-gradient(#fff 1px, transparent 1px);
+
+    background-size:4px 4px;
+    mix-blend-mode:overlay;
+}
+
+/* chrome cursor */
+
+.cursor{
+    position:fixed;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    pointer-events:none;
+
+    background:
+        radial-gradient(circle,
+        rgba(255,255,255,.7) 0%,
+        rgba(255,255,255,.12) 40%,
+        transparent 70%);
+
+    filter:blur(10px);
+    mix
